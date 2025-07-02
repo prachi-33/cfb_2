@@ -210,7 +210,7 @@ const Index = () => {
           </div>
         </section>
 
-        <section className="container mx-auto px-4 py-20">Add commentMore actions
+        <section className="container mx-auto px-4 py-20">
           <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 backdrop-blur-sm rounded-3xl border border-white/10 p-8 md:p-12">
             <div className="text-center max-w-3xl mx-auto">
               <div className="flex justify-center mb-6">
@@ -255,12 +255,15 @@ const Index = () => {
                   {!showRating ? (
                     // Centered button BEFORE webcam opens
                     <div className="flex items-center justify-center h-full">
-                      <Button
-                        onClick={() => setShowRating(true)}
-                        className="bg-discord-purple hover:bg-discord-purple/80 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300"
-                      >
-                        Click to Play
-                      </Button>
+                      <Link to="/review">
+                          <Button
+                            onClick={() => setShowRating(true)}
+                            className="bg-discord-purple hover:bg-discord-purple/80 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300"
+                          >
+                            Click to Play
+                          </Button>
+                      </Link>
+                      
                     </div>
                   ) : (
                     // Webcam section AFTER clicking "Click to Play"
@@ -284,8 +287,6 @@ const Index = () => {
             </div>
           </div>
         </section>
-
-        Add comment
 
         {/* Community Section */}
         <section className="container mx-auto px-4 py-20">
@@ -348,8 +349,6 @@ const Index = () => {
       </main>
 
       <Footer />
-
-      Add commentMore actions
       {/* AI Project Matching Chatbot */}
       <ProjectMatchingChatbot />
 
